@@ -133,6 +133,7 @@ function printItemsList(ProductLists) {
 };
 
 async function searchProduct() {
+    createDivStatus.textContent = "";
     const returnProductList = await getProducts();
     let resaultsSearch = [];
     returnProductList.forEach(product => {
@@ -146,6 +147,7 @@ async function searchProduct() {
 };
 
 async function showMyCartList() {
+    createDivStatus.textContent = "";
     const returnProductList = await getProducts();
     printItemsList(returnProductList);
 };
