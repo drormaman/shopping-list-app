@@ -54,9 +54,10 @@ app.put('/products/:id', (req, res) => {
 // DELETE
 app.delete('/products/:id', (req, res) => {
     const paramId = req.params.id;
-    products.forEach((product, i, products) => {
+    let deletedName;
+    products.forEach((product, i) => {
         if (product.id === paramId) {
-            const deletedName = product.productName;
+            deletedName = product.productName;
         }
     });
     products = products.filter(product => product.id !== paramId);
