@@ -48,12 +48,19 @@ app.put('/products/:id', (req, res) => {
             res.send(products[i]);
         }
     });
+    res.send(`This product id doesn't exist`)
 });
 
 // DELETE
 app.delete('/products/:id', (req, res) => {
-    products = products.filter(product => product.id !== req.params.id);
-    res.send(`Id: ${req.params.id} was deleted`);
+    const paramId = req.params.id;
+    products.forEach((product, i, products) => {
+        if (product.id === paramId) {
+            const deletedName = product.productName;
+        }
+    });
+    products = products.filter(product => product.id !== paramId);
+    res.send(`${deletedName} was deleted`);
 });
 
 app.listen(3000);
