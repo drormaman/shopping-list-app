@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Front End.css">
+    <title>Shopping List</title>
+</head>
+<h1>My shopping list</h1>
+<div id="editSection">
+    <label for="item">Enter a new product:</label>
+    <input type="text" name="inputNameProduct" id="inputNameProduct" placeholder="Product Name" autofocus>
+    <input type="number" id="inputPriceProduct" name="price" min="0" max="1000" step="0.1" placeholder="Price">
+    <button type="submit" value="Submit" id="addItemButton"></button>
+    <button type="submit" value="Submit" id="showMyCart"></button>
+    <span id="statusAction"></span><br>
+    <label for="item">Search in your products:</label>
+    <input type="text" name="inputSearchProduct" id="inputSearchProduct" placeholder="Product to search">
+
+
+</div>
+<ol id="productList">
+</ol>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="Front End.js"></script>
+</body>
+
+</html>
