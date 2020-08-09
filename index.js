@@ -48,7 +48,6 @@ app.put('/products/:id', (req, res) => {
             res.send(products[i]);
         }
     });
-    res.send(`This product id doesn't exist`)
 });
 
 // DELETE
