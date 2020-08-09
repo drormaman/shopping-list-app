@@ -69,7 +69,7 @@ label {
     padding: 16px 0px 0px 0px;
     font-size: 30px;
     display: grid;
-    grid-template-areas: 'name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name name price edit delete';
+    grid-template-areas: 'name price edit delete';
 }
 
 .product :hover {
@@ -82,6 +82,7 @@ label {
 }
 
 .productName {
+    width: 380px;
     grid-area: name;
 }
 
