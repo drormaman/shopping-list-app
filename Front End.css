@@ -101,7 +101,6 @@ label {
 
 .deleteButton {
     grid-area: delete;
-    position: -ms-page;
     margin: 0px 10px 0px 0px;
     background-image: url("https://e7.pngegg.com/pngimages/616/37/png-clipart-trash-can-illustration-computer-icons-icon-design-delete-button-miscellaneous-text.png");
     background-size: 100%;
@@ -113,6 +112,11 @@ label {
 }
 
 .totalAmount {
+    position: relative;
+    margin: 0px 0px 0px -50px;
+    display: inline;
+    background-color: wheat;
+    border: 2px solid red;
     text-align: left;
     font-size: 35px;
 }
