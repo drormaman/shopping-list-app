@@ -73,8 +73,6 @@ async function addNewProduct() {
         addChild(productList, "product", null, createRow, returnPostedPruduct.id);
         addChild(createRow, "productName", `${returnPostedPruduct.productName}`, createNameCell);
         addChild(createRow, "productPrice", `${returnPostedPruduct.price}$`, createPriceCell)
-            //const returnProductList = await getProducts();
-            //   printItemsList(returnProductList);
         inputPriceProduct.value = "";
         inputNameProduct.value = "";
         inputSearchProduct.value = "";
