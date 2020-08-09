@@ -135,8 +135,8 @@ async function searchProduct() {
     const returnProductList = await getProducts();
     let resaultsSearch = [];
     returnProductList.forEach(product => {
-        let lowerCaseProduct = product.productName.toLowerCase();
-        if (lowerCaseProduct.includes(inputSearchProduct.value.toLowerCase())) {
+        let lowerCaseName = product.productName.toLowerCase();
+        if (lowerCaseName.includes(inputSearchProduct.value.toLowerCase()) || product.price.includes(inputSearchProduct.value.toLowerCase())) {
             resaultsSearch.push(product);
         };
     });
