@@ -117,7 +117,8 @@ label {
 }
 
 .returnStatus {
-    margin: 55px 0px 0px 750px;
-    position: absolute;
+    display: inline;
+    background-color: wheat;
+    border: 2px solid red;
     font-size: 35px;
 }
