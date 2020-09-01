@@ -33,8 +33,10 @@ function removeAllChildren(parent) {
 
 async function getProducts() {
     removeAllChildren(productList);
-    return axios.get('http://localhost:3000/products')
-        .then(response => response.data);
+    const response = await axios.get('http://localhost:3000/products')
+    const resData = await response.data
+        //let x = axios.get('http://localhost:3000/products').then(response => response.data);
+    return resData
 };
 
 // function getProduct(id) {
@@ -136,7 +138,7 @@ async function searchProduct() {
     let resaultsSearch = [];
     returnProductList.forEach(product => {
         let lowerCaseName = product.productName.toLowerCase();
-        if (lowerCaseName.includes(inputSearchProduct.value.toLowerCase()) || product.price.includes(inputSearchProduct.value.toLowerCase())) {
+        if (lowerCaseName.includes(inputSearchProduct.value.toLowerCase()) || product.pric.includes(inputSearchProduct.value.toLowerCase())) {
             resaultsSearch.push(product);
         };
     });
